@@ -1,0 +1,27 @@
+--Baixando o postgresql
+https://www.postgresql.org/download/
+
+Selecione Windows
+Clique em Download the installer
+Selecione a versão desejada, e o sistema operacional correspondente (nesse caso , 9.6.12 e windows 64bits)
+Escolha a senha 
+Deixar porta padrão
+Desmarcar caixa na finalização da instalação
+
+Procucar onde o arquivo foi salvo
+copiar o caminho da pasta bin dentro do arquivo (nesse caso : C:\Program Files\PostgreSQL\9.6\bin)
+Va em meu computador, clique com o botão direito, e va em propriedades
+Clique em configurações avançadas 
+clique em variaveis de ambiente
+clique duas vezes em path
+cole o caminho copiado
+
+Para acesar o postgres
+acesse o cmd
+Digite 'psql -U postgres'
+Digite a senha do postgres
+
+\l - lista os schamas
+\c - se conecta a um banco
+\dt - lista as tabelas do banco
+\q - sai do client do postgres

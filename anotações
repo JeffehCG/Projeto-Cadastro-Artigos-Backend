@@ -1,0 +1,25 @@
+"dependencies": {
+    "bcrypt-nodejs": "0.0.3",   --Criptografar a senha do usuario
+    "body-parser": "1.18.3",    --Ler o body do arquivo em uma requisição
+    "consign": "0.1.6",         --Parte de dependencias
+    "cors": "2.8.4",            --Liberar acesso de origens diferenças
+    "express": "4.16.3",        --framawork para fazer os webservices do projeto
+    "jwt-simple": "0.5.1",      --Segurança
+    "knex": "0.15.2",           --Biblioteca para acessar o banco de dados relacional (Query Bilder)
+    "moment": "2.22.2",         --Parte de data
+    "mongoose": "^5.2.17",      --Drive mongodb
+    "node-schedule": "1.3.0",   --Temporizador (nesse projeto, para migra dados de um banco para outro)
+    "passport": "0.4.0",        --Segurança
+    "passport-jwt": "4.0.0",    --Segurança
+    "pg": "7.4.3",              --Drive postgres
+    "pm2": "3.0.4"              --Laucher pm2 (parecido com nodemon)
+  }
+
+--Conexão com banco de dados
+knex init -- criar arquivo knexfile.js (que contem a configuração com banco de dados)
+knex migrate:make nomeDaMigration -- Responsaveis por criar a tabela na primeira execução (quando a tabela não existe) 
+knex migrate:latest -- com todos arquivos migrate criados e preenchidos , comando que cria as tabelas no banco
+knex migrate:rollback -- apaga tabelas criadas
+
+--Autentificação
+arquivo .env contem o campo authSecret, nesse campo contem um codigo, que sera gerado um token no frontend para identificar se o usuario esta logado (esse codigo pode ser qualquer coisa, porem quanto mais complexo melhor)
